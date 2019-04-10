@@ -46,15 +46,17 @@ body{
   font-weight: 400;
   font-size: .7rem;
   letter-spacing: .1rem;
-  color: white;
+  color: #ffffff;
   background-color: #9FA9D1;
   border-radius: 15px;
+  /* border-color: rgba(255, 255, 255, 0.0); */
   padding: 5px 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  border: transparent;
 }
 
 .__login:hover{
-    color: #ffcb3f;
+    color: #3b3b8f;
 }
 
 .__cerrar{
@@ -66,11 +68,12 @@ body{
   background-color: #e0e0f5;
   border-radius: 15px;
   padding: 5px 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, .1); */
+  border: transparent;
 }
 
 .__cerrar:hover{
-  color: #ffcb3f;
+  color: #3b3b8f;
 }
 
 a:hover{
@@ -87,11 +90,17 @@ a:hover{
   background-color: #ffcb3f;
   border-radius: 15px;
   padding: 5px 20px;
+  border: transparent;
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.02); */
 }
 
 .__registrarse:hover{
   color: #3b3b8f;
+}
+
+.__botones{
+  position: relative;
+  margin: 3px;
 }
 
 /* .__recordame{
@@ -105,7 +114,7 @@ a:hover{
 } */
 
 .__campos{
-  width: 95%;
+  width: 100%;
   line-height:25px;
   background-color: #e1e1ff;
   text-align: left;
@@ -212,6 +221,10 @@ textarea{
   border: 0;
 }
 
+.__copyright{
+  line-height: 1.5;
+  margin-top: 10px;
+}
 .__footer{
   /* position: relative; */
   background-color: #ffcb3f;
@@ -262,9 +275,6 @@ textarea{
     padding-top: 5%;
   }
 
-  .__contacto{
-    /* height: 55vh; */
 
-  }
 
 }
