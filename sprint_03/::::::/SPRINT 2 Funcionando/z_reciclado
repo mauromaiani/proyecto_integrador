@@ -1,0 +1,108 @@
+LOGIN
+
+<?php
+  if(isset($errores)):?>
+    <ul class="alert alert-danger">
+      <?php
+      foreach ($errores as $key => $value) :?>
+        <li> <?=$value;?> </li>
+        <?php endforeach;?>
+    </ul>
+  <?php endif;?>
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="__titulo" id="exampleModalLabel">Iniciar Sesión</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="" action="" method="POST">
+      <div class="modal-body">
+        <div class="">
+            <div>
+            <input class="__campos" type="email" name="email" id="email" value="<?=isset($errores["email"])? "":inputUsuario("email") ;?>" placeholder="Email...">
+            <input class="__campos" type="password" name="password" id="password" value="" placeholder="Contraseña...">
+            </div>
+            <div class="text-center">
+            <label class="__texto"><input type="checkbox" name="recordar" id="recordarme" value="recordar">Recordarme</label>
+            <br>
+            <a class="__ayuda" href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="__cerrar" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="__login">Entrar</button>
+      </div>
+    </form>
+    </div>
+    </div>
+    </div>
+ _________________________
+
+
+ Registro
+
+
+
+ <!-- <?php
+ require_once("autoload.php");
+ if ($_POST){
+   $errores=validar($_POST);
+   if(count($errores)==0){
+     $registro = armarRegistro($_POST);
+     guardar($registro);
+     header("location: index.php");
+     exit;
+   }
+ }
+ ?>
+ <!DOCTYPE html>
+ <html lang="ES" dir="ltr">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="css/registro.css">
+     <title>Registro</title>
+   </head>
+   <body>
+
+
+     <div class="formulario">
+       <?php
+         if(isset($errores)):?>
+           <ul class="alert alert-danger">
+             <?php
+             foreach ($errores as $key => $value) :?>
+               <li> <?=$value;?> </li>
+               <?php endforeach;?>
+           </ul>
+         <?php endif;?>
+        <div class="tt">
+          <h1 align="center">Crear Usuario</h1>
+          <form action="" method="post" >
+
+        </div>
+        <div class="dscrp">
+          <label class="inf">Nombre</label><br>
+          <label class="inf">Email</label><br>
+          <label class="inf">pasword</label><br>
+          <label class="inf">Confirmacion</label>
+        </div>
+        <div class="inpts">
+           <input class="inp" name="nombre" type="text" id="nombre"  value="<?=(isset($errores["nombre"]))?"": inputUsuario("nombre");?>" placeholder="Nombre">
+          <input class="inp" name="email" type="email" id="email" value="<?=(isset($errores["email"]))?"": inputUsuario("email");?>" placeholder="Correo electronico">
+          <input class="inp" type="password" id="password" name="password" value="" placeholder="password">
+          <input class="inp" type="password" id="repassword" name="repassword" value="" placeholder="Repetir password">
+        </div>
+        <div class="btns">
+          <label><input type="checkbox" name="recordarme">Recordarme</label>
+          <button type="submit">Enviar</button>
+        </form>
+        </div>
+      </div>
+    </body>
+   </html> -->

@@ -1,0 +1,89 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+body{
+  overflow: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: .7rem;
+  letter-spacing: .1rem;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  /* display: inline-block; */
+}
+
+.navbar-brand img{
+  height: 1rem;
+}
+
+/* .navbar-nav{
+  display: inline-block;
+} */
+
+.navbar-nav li{
+  padding-right: .7rem;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: #9FA9D1;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover{
+  color: #4d4cad;
+}
+
+.__login{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: .7rem;
+  letter-spacing: .1rem;
+  color: white;
+  background-color: #9FA9D1;
+  border-radius: 15px;
+  padding: 5px 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+}
+
+.__registrarse{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .7rem;
+  letter-spacing: .1rem;
+  color: white;
+  background-color: #ffcb3f;
+  border-radius: 15px;
+  padding: 5px 20px;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.02); */
+}
+
+.__juntos{
+  height: 100vh;
+}
+
+.__titulo{
+  font-family: 'Abril Fatface', cursive;
+  color: #4d4cad;
+}
+
+.__texto{
+  font-weight: 400;
+  font-size: .7rem;
+  color: #9a9fb3;
+}
+
+.__textos{
+  align-items: center;
+  padding-top: 20%;
+}
+
+.__imagenes{
+  align-items: center;
+  padding-top: 5%;
+}
