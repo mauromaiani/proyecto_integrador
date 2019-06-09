@@ -7,12 +7,15 @@ $usuarioSeleccionado = Query::mostrarUsuario($pdo,'users',$id_usuario)
 ?>
 <html lang="es" dir="ltr">
   <head>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master1.css">
     <meta charset="utf-8">
-    <title>Mostrar los datos dele usuario</title>
+    <title>Datos del usuario</title>
   </head>
   <body>
-    <h1>Datos del usuario</h1>
+  <br><br>
+  <article class="__textos text-center col-xs-12 col-md-6 col-lg-6">
+    <h2 class="__titulo">Datos del usuario</h2>
     <!--Aquí les dejo a su imaginación y creativodad para jugar con esto como quieran-->
     <?php foreach ($usuarioSeleccionado as $key => $value):?>
       <h2><?= $value["name"] ;?></h2>
@@ -25,6 +28,7 @@ $usuarioSeleccionado = Query::mostrarUsuario($pdo,'users',$id_usuario)
     <?php endforeach;?>
     </ul>
     <a href="listadoUsuariosAdmin.php">Retornar</a>
+    </article>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
