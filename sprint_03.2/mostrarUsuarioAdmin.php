@@ -14,20 +14,20 @@ $usuarioSeleccionado = Query::mostrarUsuario($pdo,'users',$id_usuario)
   </head>
   <body>
   <br><br>
-  <article class="__textos text-center col-xs-12 col-md-6 col-lg-6">
+  <article class="text-center col-xs-12 col-md-6 col-lg-6">
     <h2 class="__titulo">Datos del usuario</h2>
     <!--Aquí les dejo a su imaginación y creativodad para jugar con esto como quieran-->
     <?php foreach ($usuarioSeleccionado as $key => $value):?>
       <h2><?= $value["name"] ;?></h2>
     <?php endforeach;?>
-    <ul>
+    <ul class="list-unstyled">
     <?php foreach ($usuarioSeleccionado as $index => $attributes) : ?>
       <?php foreach($attributes as $key => $value): ?>
         <li><?= $key." : ".$value ?> </li>
       <?php endforeach;?>
     <?php endforeach;?>
     </ul>
-    <a href="listadoUsuariosAdmin.php">Retornar</a>
+    <a class="__login" href="listadoUsuariosAdmin.php">Volver</a>
     </article>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

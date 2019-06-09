@@ -31,24 +31,18 @@ elseif (isset ($_POST["no"])) {
 <div class="container">
 <br><br>
   <article class="__textos text-center col-xs-12 col-md-5 col-lg-4">
+    <h2 class="__titulo">Eliminar</h2>
+        <?php foreach ($usuarioSeleccionado as $key => $value):?>
+          <h1><?= $value["name"] ;?></h1>
+        <?php endforeach;?>
     <form class="" action="" method="post">
-      <p class="__texto">¿Estás seguro que queres eliminar este usuario?</p>
+      <p class="__texto">¿Estás seguro que queres borrar este usuario?</p>
       <input class="__login" type="submit" name="borrar" value="si">
       <input class="__cerrar" type="submit" name="no" value="no">
       <input type="hidden" name="id" value="<?=$id_usuario;?>">
    </form>
    </article>
 
-    <?php foreach ($usuarioSeleccionado as $key => $value):?>
-      <h1><?= $value["name"] ;?></h1>
-    <?php endforeach;?>
-    <ul>
-    <?php foreach ($usuarioSeleccionado as $index => $attributes) : ?>
-      <?php foreach($attributes as $key => $value): ?>
-        <li><?= $key." : ".$value ?> </li>
-      <?php endforeach;?>
-    <?php endforeach;?>
-    </ul>
 </div>
 
   </body>

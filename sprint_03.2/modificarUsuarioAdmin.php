@@ -35,11 +35,11 @@ if (isset($_POST["modificar"])) {
   <h2 class="__titulo">Modificar Usuario</h2>
   <div class="container">
     <form class="" action="" method="post">
-        <h3><?= $usuarioAModificar ["name"] ;?></h3>
+        <h2><?= $usuarioAModificar ["name"] ;?></h2>
         <?php foreach ($usuarioAModificar as $key => $value) : ?>
             <label><?= $key?> :</label>
             <?php if($key =="id"){?>
-                <input type="text" disabled name="<?= $key?>" value="<?= $value?> ">
+                <input  type="text" disabled name="<?= $key?>" value="<?= $value?> ">
             <?php }else{?>
                 <input type="text" name="<?= $key?>" value="<?= $value?>">
             <?php }?>
