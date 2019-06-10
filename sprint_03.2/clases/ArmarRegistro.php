@@ -5,7 +5,7 @@ class ArmarRegistro{
         $ext = pathinfo($nombre,PATHINFO_EXTENSION);
         $archivoOrigen = $imagen["avatar"]["tmp_name"];
         $archivoDestino = dirname(__DIR__);
-        $archivoDestino = $archivoDestino."/imagenes/";
+        $archivoDestino = $archivoDestino.'/imagenes/';
         $avatar = uniqid();
         $archivoDestino = $archivoDestino.$avatar;
         $archivoDestino = $archivoDestino.".".$ext;
@@ -16,7 +16,7 @@ class ArmarRegistro{
 
     public function armarUsuario($registro,$avatar){
         $usuario = [
-            "nombre"=>$registro->getNombre(),
+            "name"=>$registro->getNombre(),
             "email"=>$registro->getEmail(),
             "password"=> Encriptar::hashPassword($registro->getPassword()),
             "avatar"=>$avatar,

@@ -1,5 +1,9 @@
 <?php
+
+
 require_once("autoload.php");
+// var_dump($_SESSION["avatar"]);
+// exit;
 if(!isset($_SESSION["email"])) {
     redirect("registro.php");
 }
@@ -11,6 +15,7 @@ if(!isset($_SESSION["email"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Source+Sans+Pro:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/master1.css">
   <title>Perfil</title>
 </head>
@@ -21,14 +26,14 @@ if(!isset($_SESSION["email"])) {
             <img class="img-circle img-responsive center-block" src="imagenes/<?=$_SESSION["avatar"];?>" alt="Avatar" >
           </article>
           <article class="__textos text-md-left text-center col-xs-12 col-md-8 col-lg-8">
-            <h2 class="__titulo">Hola <?=$_SESSION["nombre"];?> </h2>
+            <h2 class="__titulo">Hola <?=$_SESSION["name"];?> </h2>
             <p class="__texto">Bienvenida a la comunidad Walk With Me. Para comenzar a usar la red social en su totalidad tenes que completar tu perfil al 100% y agreguar contactos a tu Circulo.</p>
             <button class= "__login __botones" href="perfil.php">Perfil</button>
             <button class= "__registrarse __botones" href="perfil.php">Circulo</button>
             <br>
             <br>
             <?php if($_SESSION["role"]==9):?>
-              <a href="listadoUsuariosAdmin.php"> Administración de Usuarios</a>
+              <a href="listadoUsuariosAdmin.php">Administración de Usuarios</a>
             <?php endif;?>
             <br>
             <br>

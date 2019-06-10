@@ -9,10 +9,11 @@ class Autenticador{
         return password_verify($password,$passwordHash);
     }
     static public function seteoSesion($user){
-        $_SESSION["nombre"]=$user["nombre"];
+        $_SESSION["name"]=$user["name"];
         $_SESSION["email"] = $user["email"];
         $_SESSION["perfil"]= $user["perfil"];
         $_SESSION["avatar"]= $user["avatar"];
+        $_SESSION["role"]= $user["role"];
     }
     static public function seteoCookie($user){
             setcookie("email",$dato["email"],time()+3600);
@@ -29,4 +30,3 @@ class Autenticador{
         }
     }
 }
-

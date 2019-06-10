@@ -1,22 +1,22 @@
 <?php
 class Usuario{
-    private $nombre;
+    private $name;
     private $email;
     private $password;
     private $repassword;
     private $avatar;
-    public function __construct($email,$password,$repassword=null, $nombre=null,$avatar=null){
-        $this->nombre = $nombre;
+    public function __construct($email,$password,$repassword=null, $name=null,$avatar=null){
+        $this->name = $name;
         $this->email = $email;
         $this->password = $password;
         $this->repassword = $repassword;
         $this->avatar = $avatar;
     }
     public function getNombre(){
-        return $this->nombre;
+        return $this->name;
     }
-    public function setNombre($nombre){
-        $this->nombre = $nombre;
+    public function setNombre($name){
+        $this->name = $name;
     }
     public function getEmail(){
         return $this->email;
@@ -43,6 +43,6 @@ class Usuario{
     public function setAvatar($avatar){
         $this->avatar = $avatar;
     }
-    
+
 }
 ?>
