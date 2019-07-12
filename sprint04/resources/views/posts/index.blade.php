@@ -1,11 +1,11 @@
 @extends('layouts.app')
-
+<!-- @include('partials.header') -->
 @section('content')
 <div class="container">
   @foreach($posts as $post)
   <div class="row">
     <div class="col-8 py-4">
-      <a href="/profile/{{ $post->user->id }}">
+      <a href="/post/{{ $post->id }}">
         <img src="/storage/{{ $post->image }}" class="w-100">
       </a>
     </div>
@@ -19,6 +19,13 @@
             <div class="font-weight-bold">
               <a href="/profile/{{ $post->user->id }}">
                 <span class="text-dark">{{ $post->user->username }}</span>
+                <!-- <span class="text-dark">
+                  @if (auth()->user()->following())
+                    {{ $post->user->username }}
+                    @else
+                    anonimo
+                    @endif
+                </span> -->
               <!-- </a>
               <a href="#" class="pl-3">Seguir</a> -->
             </div>
@@ -27,9 +34,10 @@
         <hr>
         <p>
           <span class="font-weight-bold">
-          <a href="/profile/{{ $post->user->id }}">
-            <!-- <span class="text-dark">{{ $post->user->username }}</span> -->
-          </a></span> {{ $post->caption }}
+          <a href="/profile/{{ $post->user->id }}"></a></span>
+          {{ $post->caption }}
+          <br>
+          <strong>{{ $post->created_at }}</strong>
         </p>
       </div>
     </div>

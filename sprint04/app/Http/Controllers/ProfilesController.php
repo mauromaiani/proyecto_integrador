@@ -47,5 +47,21 @@ class ProfilesController extends Controller
       return redirect("/profile/{$user->id}");
     }
 
+    // public function search(){
+    //   $search = \Request::get('title');
+    //   $profiles = User::where('username', 'like', '%' .$search. '%')->orderBy ('id')->paginate(10);
+    //   return view('search');
+    // }
+
+    // public function search(){
+      // $search = DB::table('users');->get();
+      // $profiles = User::where('username', 'like', '%' .$search. '%')->orderBy ('id')->paginate(10);
+      // return view('search');
+  //  }
+
+    public function show($username){
+      $profile = User::find($username);
+      return view('profiles.search')->with('profile', $profile);
+    }
 
 }

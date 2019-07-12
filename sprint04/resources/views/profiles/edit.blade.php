@@ -1,4 +1,8 @@
+
 @extends('layouts.app')
+
+
+
 
 @section('content')
 <div class="container">
@@ -13,7 +17,7 @@
           <h1>Editar Perfil</h1>
         </div>
         <div class="form-group row">
-            <label for="title" class="col-md-4 col-form-label">Titulo</label>
+            <label for="title" class="col-md-4 col-form-label">Nombre</label>
 
                 <input id="title" type="text" class="form-control @error('title') is-invalid @enderror"
                 name="title" value="{{ old('title') ?? $user->profile->title }}" required autocomplete="title" autofocus>
@@ -26,7 +30,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="description" class="col-md-4 col-form-label">Descripción</label>
+            <label for="description" class="col-md-4 col-form-label">Bio</label>
 
                 <input id="description" type="text" class="form-control @error('description') is-invalid @enderror"
                 name="description" value="{{ old('description') ?? $user->profile->description }}" autofocus>

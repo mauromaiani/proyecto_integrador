@@ -8,10 +8,10 @@
       <div class="col-8 offser-2">
 
         <div class="row">
-          <h1>Subir Post</h1>
+          <h1>Denunciar Acoso</h1>
         </div>
         <div class="form-group row">
-            <label for="caption" class="col-md-4 col-form-label">Mensaje</label>
+            <label for="caption" class="col-md-4 col-form-label">Situación</label>
 
                 <input id="caption" type="text" class="form-control @error('caption') is-invalid @enderror"
                 name="caption" value="{{ old('caption') }}" required autocomplete="caption" autofocus>
@@ -32,7 +32,7 @@
             </div>
 
             <div class="row pt-4">
-              <button class="btn btn-primary">Subir post</button>
+              <button class="btn btn-primary">Enviar Denuncia</button>
             </div>
 
       </div>

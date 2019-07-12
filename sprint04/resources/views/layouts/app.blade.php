@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/feed') }}">
                   <div><img src="/img/logo_wwm.png" style="height: 20px"></div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -36,6 +36,22 @@
 
                     </ul>
 
+                    <form class="navbar-form" role="search" action="{{ url("profile/search")}}" method="get">
+
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar" name="title">
+                        <!-- <div class="input-group-btn">
+                          <button class="btn btn-default">
+                            <i class="fas fa-search">Buscar</i>
+                          </button>
+                        </div> -->
+                        <span class="input-group-btn">
+                          <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                          </button>
+                        </span>
+                      </div>
+                    </form>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -50,17 +66,19 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/profile/{{ Auth::user()->id }}">
+                                    Perfil
+                                  </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
